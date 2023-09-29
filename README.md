@@ -39,14 +39,14 @@ The model was trained using a supervised learning approach. The dataset was spli
 **Evaluation Metrics:**
 To assess the performance of our model, we used standard classification metrics, including accuracy, precision, recall, F1-score, and confusion matrices. These metrics provide a comprehensive understanding of the model's ability to differentiate between the three disease categories.
 
-### **Training and Validation Loss, Accuracy
-![tr_val_accuracy](imgs\tr_val_acc.png)
+### **Training and Validation Loss, Accuracy**
+![tr_val_accuracy](imgs/tr_val_acc.png)
 
 ### **Confusion Matrix**
-![Confusion Matrix](imgs\confusion matrix.png)
+![ConfusionMatrix](imgs/confusion%20matrix.png)
 
 ### **Classification Report**
-![Classification report](imgs\classification report.png) 
+![Classificationreport](imgs/classification%20report.png) 
 
 It demonstrates high precision, recall, and F1-scores for most classes, suggesting that the model is effective in identifying and differentiating between 'Coccidiosis,' 'Healthy,' 'New Castle Disease,' and 'Salmonella.' Additionally, the high accuracy and balanced macro-average metrics further validate the model's overall performance.
                  
