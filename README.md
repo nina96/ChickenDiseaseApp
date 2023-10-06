@@ -60,4 +60,4 @@ In conclusion, our project successfully utilized the EfficientNetB7 model to cla
 **Depoyment:**
 the whole project is made to show case how to make modular code and different pipeline. Flask has been used for study purpose. Actual app made and deployed using Streamlit
 
-[Click for app]()
+[Click]()
