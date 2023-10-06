@@ -57,3 +57,7 @@ Our model demonstrated remarkable accuracy in classifying chicken fecal images i
 
 In conclusion, our project successfully utilized the EfficientNetB7 model to classify chicken fecal images into 'Salmonella,' 'New Castle Disease,' and 'Coccidiosis' categories. The careful preprocessing of images and the power of the model architecture contributed to the excellent performance observed in disease classification. This approach has the potential to revolutionize poultry health management by enabling early disease detection and informed decision-making for farmers and veterinarians. Further research and real-world implementation can enhance the impact of this technology on poultry farming practices.
 
+**Depoyment:**
+the whole project is made to show case how to make modular code and different pipeline. Flask has been used for study purpose. Actual app made and deployed using Streamlit
+
+[Click for app]()

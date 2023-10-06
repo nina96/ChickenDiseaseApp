@@ -17,4 +17,5 @@ Flask-Cors
 scikit-learn
 shutils
 opencv-python
+streamlit
 #-e.

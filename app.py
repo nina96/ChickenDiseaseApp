@@ -1,47 +1,56 @@
-from flask import Flask, request, jsonify, render_template
 import os
-from flask_cors import CORS, cross_origin
+import streamlit as st
+from PIL import Image
 from src.ChickenDisease.utils.common import decodeImage
 from src.ChickenDisease.pipeline.predict import PredictionPipeline
 
-
 os.putenv('LANG', 'en_US.UTF-8')
 os.putenv('LC_ALL', 'en_US.UTF-8')
-
-app = Flask(__name__)
-CORS(app)
-
 
 class ClientApp:
     def __init__(self):
         self.filename = "inputImage.jpg"
         self.classifier = PredictionPipeline(self.filename)
 
+clApp = ClientApp()
 
-@app.route("/", methods=['GET'])
-@cross_origin()
-def home():
-    return render_template('index.html')
+st.title("Chicken Disease Classification")
 
-
-@app.route("/train", methods=['GET','POST'])
-@cross_origin()
-def trainRoute():
+# Create a sidebar for training
+if st.sidebar.button("Train Model"):
     os.system("python main.py")
-    return "Training done successfully!"
+    st.sidebar.success("Training done successfully!")
 
+# Create the main content
+st.sidebar.header("Upload Image")
+image = st.sidebar.file_uploader("Choose an image...", type=["jpg", "jpeg","png"])
 
+if image:
+    try:
+        # Open the uploaded image with PIL to check if it's a valid image
+        with Image.open(image) as img:
+            st.image(img, caption="Uploaded Image", use_column_width=True)
+            st.sidebar.success("Image uploaded successfully!")
 
-@app.route("/predict", methods=['POST'])
-@cross_origin()
-def predictRoute():
-    image = request.json['image']
-    decodeImage(image, clApp.filename)
-    result = clApp.classifier.predict()
-    return jsonify(result)
+            # Make a prediction if an image is uploaded
+            if st.sidebar.button("Predict"):
+                with st.spinner("Predicting..."):
+                        try:
+                            image_bytes= img.tobytes()
+                            
+                                # Decode and process the image
+                            decodeImage(image_bytes, clApp.filename)
+                                # Make a prediction
+                            result = clApp.classifier.predict()
+                                
+                                # Display the prediction
+                            st.success("Prediction:")
+                            st.json(result)
+                        
+                        except Exception as e:
+                            st.error(f"Error: {e}")
 
-
-if __name__ == "__main__":
-    clApp = ClientApp()
-    app.run(host='0.0.0.0') 
-    
+                st.success("Prediction:")
+                st.json(result)
+    except Exception as e:
+        st.error(f"Error: {e}")
