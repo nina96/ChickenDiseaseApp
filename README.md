@@ -1,17 +1,17 @@
 # ChickenDiseaseApp
 ### Introduction to Chicken Fecal Image Classification Problem:
 
-In the realm of poultry farming and livestock management, the detection and diagnosis of diseases in chickens play a crucial role in ensuring the health and well-being of these avian creatures. One of the essential indicators of a chicken's health is the examination of its fecal matter. The analysis of chicken fecal images has emerged as an innovative and valuable tool for poultry farmers, veterinarians, and researchers in identifying various diseases and health-related issues in poultry flocks.
+In the realm of poultry farming and livestock management, the detection and diagnosis of diseases in chickens play a crucial role in ensuring the health and well-being of these avian creatures. One of the essential indicators of a chicken's health is the examination of its faecal matter. The analysis of chicken faecal images has emerged as an innovative and valuable tool for poultry farmers, veterinarians, and researchers in identifying various diseases and health-related issues in poultry flocks.
 
-Chicken fecal image classification is a challenging problem that involves leveraging image processing, computer vision, and machine learning techniques to categorize and diagnose health conditions in chickens based on the visual characteristics of their fecal samples. The objective is to develop a robust and accurate system that can automatically classify fecal images into different disease categories or health states.
+Chicken faecal image classification is a challenging problem that involves leveraging image processing, computer vision, and machine learning techniques to categorize and diagnose health conditions in chickens based on the visual characteristics of their faecal samples. The objective is to develop a robust and accurate system that can automatically classify faecal images into different disease categories or health states.
 
 The significance of this problem lies in its potential to revolutionize the poultry industry by offering several benefits:
 
 1. **Early Disease Detection:** Automated image classification can help detect diseases or infections in chickens at an early stage, allowing for timely intervention and treatment.
 
-2. **Improved Farm Management:** Farmers can make informed decisions regarding flock health, vaccination strategies, and overall management practices based on real-time data from fecal image analysis.
+2. **Improved Farm Management:** Farmers can make informed decisions regarding flock health, vaccination strategies, and overall management practices based on real-time data from faecal image analysis.
 
-3. **Reduced Manual Labor:** Automating the classification process reduces the reliance on manual labor for fecal sample analysis, making it more efficient and cost-effective.
+3. **Reduced Manual Labor:** Automating the classification process reduces the reliance on manual labour for faecal sample analysis, making it more efficient and cost-effective.
 
 4. **Preventive Measures:** By identifying disease trends and patterns, preventive measures can be implemented to reduce the risk of disease outbreaks.
 
@@ -19,10 +19,10 @@ The significance of this problem lies in its potential to revolutionize the poul
 
 **Dataset:**
 
-This dataset was taken from kaggle. It is a comprehensive dataset of chicken fecal images, including samples with 'Salmonella,' 'New Castle Disease,' and 'Coccidiosis.' The dataset was carefully curated and labeled to ensure accuracy and reliability in disease classification.The poultry fecal images were taken in Arusha and Kilimanjaro regions in Tanzania between September 2020 and February 2021 using Open Data Kit (ODK) app on mobile phones. The images are resized to 224px by 224px. 
-This dataset contains 33% salmonella, 31 % coccidiosis and remaining consitute of healthy and new castle disease. 
+This dataset was taken from kaggle. It is a comprehensive dataset of chicken faecal images, including samples with 'Salmonella,' 'New Castle Disease,' and 'Coccidiosis.' The dataset was carefully curated and labelled to ensure accuracy and reliability in disease classification. The poultry faecal images were taken in Arusha and Kilimanjaro regions in Tanzania between September 2020 and February 2021 using the Open Data Kit (ODK) app on mobile phones. The images are resized to 224px by 224px. 
+This dataset contains 33% salmonella, and 31 % coccidiosis and the remaining consists of healthy and new castle disease. 
 
-Dataset is imbalanced with 60% data belonging to two labels. So to balance trainind data we are limiting maximum samples to 500 samples
+The dataset is imbalanced with 60% of data belonging to two labels. So to balance training data we are limiting the maximum samples to 500 samples
 
 ## **Training**
 **Image Preprocessing:**
@@ -51,13 +51,13 @@ To assess the performance of our model, we used standard classification metrics,
 It demonstrates high precision, recall, and F1-scores for most classes, suggesting that the model is effective in identifying and differentiating between 'Coccidiosis,' 'Healthy,' 'New Castle Disease,' and 'Salmonella.' Additionally, the high accuracy and balanced macro-average metrics further validate the model's overall performance.
                  
 **Results:**
-Our model demonstrated remarkable accuracy in classifying chicken fecal images into the specified disease categories. The EfficientNetB7 architecture, combined with proper preprocessing and data augmentation, enabled us to achieve high precision and recall rates. The results indicate the potential of automated fecal image classification for disease diagnosis in poultry farming.
+Our model demonstrated remarkable accuracy in classifying chicken faecal images into the specified disease categories. The EfficientNetB7 architecture, combined with proper preprocessing and data augmentation, enabled us to achieve high precision and recall rates. The results indicate the potential of automated faecal image classification for disease diagnosis in poultry farming.
 
 **Conclusion:**
 
-In conclusion, our project successfully utilized the EfficientNetB7 model to classify chicken fecal images into 'Salmonella,' 'New Castle Disease,' and 'Coccidiosis' categories. The careful preprocessing of images and the power of the model architecture contributed to the excellent performance observed in disease classification. This approach has the potential to revolutionize poultry health management by enabling early disease detection and informed decision-making for farmers and veterinarians. Further research and real-world implementation can enhance the impact of this technology on poultry farming practices.
+In conclusion, our project successfully utilized the EfficientNetB7 model to classify chicken faecal images into 'Salmonella,' 'New Castle Disease,' and 'Coccidiosis' categories. The careful preprocessing of images and the power of the model architecture contributed to the excellent performance observed in disease classification. This approach has the potential to revolutionize poultry health management by enabling early disease detection and informed decision-making for farmers and veterinarians. Further research and real-world implementation can enhance the impact of this technology on poultry farming practices.
 
-**Depoyment:**
-the whole project is made to show case how to make modular code and different pipeline. Flask has been used for study purpose. Actual app made and deployed using Streamlit
+**Deployment:**
+the whole project is made to showcase how to make modular code and different pipelines. Flask has been used for study purposes. Actual app was made and deployed using Streamlit
 
-[Click]()
+[Click](https://chickendiseaseapp.streamlit.app/)
