@@ -46,13 +46,12 @@ def prediction_cls(prediction):
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
 @st.cache_resource
+
 def load_model():
-    model=tf.keras.models.load_model("artifacts/training/chickens.h5")
+    model=tf.keras.models.load_model('src/ChickenDisease/pipeline/chick.h5')
     return model
 with st.spinner('Model is being loaded..'):
     model=load_model()
-
-    
 
 st.write("""
          # Chicken Disease Detection with Remedy Suggestion

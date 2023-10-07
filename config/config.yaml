@@ -16,5 +16,5 @@ prepare_callbacks:
 
 training:
   root_dir: artifacts/training
-  trained_model_path: artifacts\training\chickens.h5
+  trained_model_path: pipeline/chick_97.02.h5
   
